@@ -26,3 +26,5 @@ Update
 cd ~/.server-dotfiles
 git pull
 ```
+
+if `.bashrc` has been updated, you need to reload it by running `source ~/.bashrc`.
