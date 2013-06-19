@@ -77,8 +77,8 @@ alias la='ls -A'
 alias l='ls -CF'
 alias lll='ls -la'
 
-alias v=vim
-alias log=tail -f
+alias v='vim'
+alias log='tail -f'
 
 # python
 alias ipy="python -c 'import IPython; IPython.frontend.terminal.ipapp.launch_new_instance()'"
