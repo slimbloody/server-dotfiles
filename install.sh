@@ -17,6 +17,13 @@ if [ -f $HOME/.bashrc ]; then
 fi
 ln -s $CURRENT_DIR/bashrc $HOME/.bashrc
 
+# bashrc
+if [ -f $HOME/.inputrc ]; then
+    echo "Backup .inputrc"
+    mv $HOME/.inputrc $HOME/.inputrc.backup
+fi
+ln -s $CURRENT_DIR/inputrc $HOME/.inputrc
+
 # gemrc
 if [ -f $HOME/.gemrc ]; then
     echo "Backup .gemrc"
