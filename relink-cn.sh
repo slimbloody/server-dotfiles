@@ -2,8 +2,6 @@
 
 CURRENT_DIR=`pwd`
 
-# backup and install
-mkdir .dotfiles-backup
 # vimrc
 if [ ! -f $HOME/.vimrc ]; then
     echo "Relinking .vimrc"

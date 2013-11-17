@@ -3,7 +3,7 @@
 CURRENT_DIR=`pwd`
 
 # backup and install
-mkdir .dotfiles-backup
+mkdir $HOME/.dotfiles-backup
 # vimrc
 if [ -f $HOME/.vimrc ]; then
     echo "Backing up .vimrc"
