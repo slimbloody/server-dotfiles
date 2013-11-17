@@ -29,9 +29,18 @@ if [ -f $HOME/.tmux.conf ]; then
     echo "Backing up .tmux.conf"
     mv $HOME/.tmux.conf $HOME/.dotfiles-backup/
 fi
+# pip
+if [ -f $HOME/.pip/pip.conf ]; then
+    echo "Backing up pip.conf"
+    mv $HOME/.pip/pip.conf $HOME/.dotfiles-backup/
+fi
 
 ln -s $CURRENT_DIR/vimrc $HOME/.vimrc
 ln -s $CURRENT_DIR/bashrc $HOME/.bashrc
 ln -s $CURRENT_DIR/inputrc $HOME/.inputrc
 ln -s $CURRENT_DIR/tmux.conf $HOME/.tmux.conf
-ln -s $CURRENT_DIR/gemrc $HOME/.gemrc
+ln -s $CURRENT_DIR/gemrc-cn $HOME/.gemrc
+if [ ! -d "$HOME/.pip" ]; then
+    mkdir $HOME/.pip
+fi
+ln -s $CURRENT_DIR/pip.conf $HOME/.pip/pip.conf
